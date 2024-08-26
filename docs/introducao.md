@@ -6,8 +6,8 @@ Considerando o panorama apresentado, se vê a necessidade da implementação de 
 
 ## 1.1. Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. 
-Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
+Atualmente, é comum que muitos clientes enfrentem dificuldades no momento de contratar um pacote de viagem. O layout confuso das páginas, a falta de informação sobre os pacotes ofertados e a lentidão durante a navegação demonstram ser uma grande fonte de insatisfação para os turistas. 
+Apesar da acelerada evolução dos sistemas web nos últimos anos, alguns modelos de negócios aparentemente não se adaptaram totalmente ao mundo conectado, o que consequentemente acaba gerando os problemas relatados pelos clientes interessados na facilidade de poder agendar pacotes de viagens diretamente do seu computador ou smartphone. A partir do contexto apresentado, como seria possível superar as dificuldades de navegação que essas plataformas apresentam?
 
 ## 1.2. Objetivos do trabalho
 
