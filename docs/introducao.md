@@ -1,6 +1,8 @@
 # 1. INTRODUÇÃO
 
-Contextualizar a área de pesquisa do trabalho, apresentando conceitos e dados relacionados antes de apresentar a problemática a ser investigada.
+O turismo sempre desempenhou um papel crucial na criação de novas conexões culturais, na expansão de perspectivas pessoais e até mesmo no fortalecimento da economia global. Com a globalização acelerada, o acesso aos novos meios e destinos se tornou não só facilitado, como também uma necessidade tanto para o desenvolvimento profissional quanto para o enriquecimento pessoal. 
+A força do mercado de turismo pode ser tão influente que muitos países tendem a depender do mesmo. Nesse contexto, temos um mercado extremamente aquecido e competitivo, onde as agências de viagens se tornam protagonistas no papel de facilitadoras entre o turista e seu destino. No entanto, muitas agências ainda encontram dificuldades em proporcionar uma boa apresentação visual focada nos seus clientes, prejudicando a atração de novos clientes e até mesmo a retenção daqueles que já usam suas plataformas.
+Considerando o panorama apresentado, se vê a necessidade da implementação de novas interfaces focadas nas necessidades do usuário, com layout simples e responsivo, linguagem acessível e sugestões de ofertas, trazendo uma experiência agradável e fluída. Ao realizar as mudanças propostas, seria possível trazer ganhos não só na atração de novos usuários como também manter a fidelidade daqueles já presentes na plataforma.
 
 ## 1.1. Problema
 
