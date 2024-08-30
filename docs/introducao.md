@@ -11,8 +11,7 @@ Apesar da acelerada evolução dos sistemas web nos últimos anos, alguns modelo
 
 ## 1.2. Objetivos do trabalho
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. O objetivo geral deve resumir e apresentar a ideia central de um trabalho, descrevendo também a sua finalidade. Os objetivos específicos darão uma maior delimitação ao tema, além de detalhar os processos necessários para a realização do trabalho.
-
+Objetivo principal do trbalho é superar as dificuldades de navegação nas plataformas de pacotes de viagem, focando na simplificação do acesso às informações e na melhoria da experiência do usuário durante a utilização. Isso pode ser alcançado com uma abordagem centrada nas necessidades do cliente, garantindo que o processo de escolha e contratação seja mais direto e eficiente, reduzindo possíveis frustrações e tornando a navegação mais agradável.
 ## 1.3. Justificativa
 
 Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
