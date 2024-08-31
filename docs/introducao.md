@@ -18,4 +18,4 @@ Descreva a importância ou a motivação para trabalhar com esta aplicação que
 
 ## 1.4. Público alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+O projeto tem estabelecido como público alvo, pessoas adultas que se enquandram entre os que procuram fazer viagens aéreas. A proposta do sistema é trazer praticidade e clareza para aqueles que querem fazer uma viagem, mas têm dificuldade com sistemas mais burocráticos e complicados.
