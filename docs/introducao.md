@@ -14,7 +14,7 @@ Apesar da acelerada evolução dos sistemas web nos últimos anos, alguns modelo
 Objetivo principal do trbalho é superar as dificuldades de navegação nas plataformas de pacotes de viagem, focando na simplificação do acesso às informações e na melhoria da experiência do usuário durante a utilização. Isso pode ser alcançado com uma abordagem centrada nas necessidades do cliente, garantindo que o processo de escolha e contratação seja mais direto e eficiente, reduzindo possíveis frustrações e tornando a navegação mais agradável.
 ## 1.3. Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A centralização de dados é essencial para a eficiência de uma agência de viagens, mas para ser eficaz, o design é crucial. Um design intuitivo torna os dados acessíveis e fáceis de interpretar, ajudando gestores a extrair insights e tomar decisões informadas. Além disso, um bom design melhora a interação dos usuários com a aplicação, aumentando a satisfação e usabilidade. 
 
 ## 1.4. Público alvo
 
