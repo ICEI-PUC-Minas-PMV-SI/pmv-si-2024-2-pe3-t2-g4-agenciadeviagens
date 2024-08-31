@@ -1,10 +1,11 @@
 # 2. ESTADO DA ARTE
-O estado da arte é um mapeamento de toda a produção acadêmica sobre um assunto específico, aqui especificamente sobre o tema escolhido para o seu trabalho. A ideia consiste em reunir as conclusões que outras pesquisas científicas chegaram sobre um determinado assunto. Neste momento você deverá buscar respostas para as seguintes perguntas:
 
-1.	Quais pesquisas estão sendo desenvolvidas sobre esse tema?
-2.	Quem está pesquisando e onde?
-3.	O que as atuais pesquisas científicas concluíram sobre o tema? 
-4.	Quais as divergências dos pesquisadores sobre o assunto? 
-5.	Quais aspectos carecem de maior abordagem?
+As pesquisas sobre agências de viagens estão explorando uma ampla gama de tópicos, refletindo as mudanças tecnológicas, as transformações no comportamento do consumidor e as dinâmicas evolutivas do setor as agências de viagens é conduzida por uma variedade de instituições, incluindo universidades como Universidade de Harvard (Harvard Business School) realiza pesquisas sobre inovação em serviços e tecnologias aplicadas ao setor de viagens, centros de pesquisa, empresas de consultoria como a Bain & Company que analisa estratégias de mercado e transformação digital nas agências de viagens e turismo e organizações do setor. 
 
-É importante referenciar estas pesquisas, fazendo as devidas citações de acordo com as normas da ABNT e colocando as referências completas ao final do trabalho.
+As agências de viagens estão cada vez mais integrando tecnologias digitais para melhorar a eficiência operacional e oferecer melhores experiências aos clientes incluindo o uso de sistemas de reserva online, aplicativos móveis e ferramentas de análise de dados.  A tecnologia permite uma personalização mais detalhada das ofertas de viagens e ferramentas baseadas em inteligência artificial (IA) estão sendo usadas para analisar dados de clientes e oferecer recomendações mais precisas e personalizadas. 
+
+A TravelCo*, uma das principais empresas de viagens e lazer, estava começando a enfrentar pressão de preços no setor. Para ajudar a manter a lucratividade e a competitividade, a Bain foi contratada para identificar oportunidades de redução de custos, crescimento de receita e melhorar a tomada de decisão. A análise revelou quatro áreas-chave para melhoria: redução de custos, melhoria de processos de negócios, globalização e novas oportunidades de receita. Graças à abordagem da Bain, a TravelCo conseguiu aumentar sua margem em três pontos em dois anos. Além disso, a equipe do cliente foi capacitada para sustentar o progresso. 
+
+Há um consenso de que a digitalização melhora a eficiência e personalização dos serviços nas agências de viagens, com o uso de IA e automação para aprimorar a experiência do cliente. No entanto, existe um debate sobre se essa transformação pode desumanizar o atendimento e aumentar os riscos relacionados à privacidade e segurança. A eficácia da digitalização nas agências tradicionais também é discutida, com alguns estudiosos vendo-a como uma ameaça, enquanto outros a consideram uma oportunidade para inovação.  
+
+Para um site de agência de viagens, é crucial melhorar a experiência do usuário e a navegação, oferecer recomendações personalizadas enquanto protege a privacidade dos dados, e garantir integração multicanal consistente. Além disso, é importante incorporar feedback dos clientes, reforçar a segurança e conformidade com regulamentações de dados, e assegurar acessibilidade para todos os usuários. 
