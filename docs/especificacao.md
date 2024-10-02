@@ -8,10 +8,12 @@ Descrever e especificar as necessidades da Coordenação do Curso de Sistemas de
 ## 3.2 Escopo do produto
 
 ### 3.2.1 Nome do produto e seus componentes principais
-O produto será denominado SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento. Ele terá somente um componente (módulo) com os devidos elementos necessários à gestão de cursos.
+O produto será denominado SAV – Sistema de Agência de Viagens. Ele terá somente um componente (módulo) com os devidos elementos necessários à gestão de agências de viagens
 
 ### 3.2.2 Missão do produto
-Gerenciar informações sobre a oferta de cursos de aperfeiçoamento, gerenciar a composição das turmas, alunos, professores e matrículas. 
+A missão do SAV – Sistema de Agência de Viagens é centralizar e otimizar a gestão de uma agência de viagens, oferecendo uma plataforma única e eficiente que permita o controle de todos os processos operacionais. O objetivo é facilitar a administração de pacotes de viagens, cadastro de clientes, reservas e transações financeiras de maneira integrada e segura.
+
+Além disso, o SAV visa proporcionar uma interface de fácil utilização tanto para os gestores da agência quanto para os clientes, garantindo que a experiência de reserva e compra seja simples, ágil e confiável. Ao promover a automação de tarefas repetitivas e o controle preciso de dados, o sistema busca aumentar a eficiência operacional da agência, reduzir erros e melhorar a satisfação do cliente, entregando uma solução completa e segura para a gestão de viagens.
 
 ### 3.2.3 Limites do produto
 O SAV pode vender pacotes e fornecer informações, mas não oferece acompanhamento físico durante a viagem. Para questões como passeios guiados ou suporte local imediato, o viajante ainda pode precisar recorrer a serviços ou guias locais.
