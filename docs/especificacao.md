@@ -14,7 +14,7 @@ O produto será denominado SCCA – Sistema de Cadastro de Cursos de Aperfeiçoa
 Gerenciar informações sobre a oferta de cursos de aperfeiçoamento, gerenciar a composição das turmas, alunos, professores e matrículas. 
 
 ### 3.2.3 Limites do produto
-O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcelas do curso, pagamento a professore e agendamentos. O SCCA não contempla o atendimento a vários cursos de Sistemas de Informação de outras unidades da PUC Minas.
+O SAV pode vender pacotes e fornecer informações, mas não oferece acompanhamento físico durante a viagem. Para questões como passeios guiados ou suporte local imediato, o viajante ainda pode precisar recorrer a serviços ou guias locais.
 
 ### 3.2.4 Benefícios do produto
 
@@ -22,8 +22,11 @@ O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcela
 |--------------------|------------------------------------|----------------------------------------|
 |1	| Facilidade no cadastro de dados |	Essencial |
 |2 | Facilidade na recuperação de informações | Essencial | 
-|3 | Segurança no cadastro de matrículas | Essencial | 
-|4	| Melhoria na comunicação com os alunos	| Recomendável | 
+|3 | Segurança no cadastro de dados | Essencial | 
+|4 | Segurança na contratação de serviço | Essencial | 
+|5	| Melhoria na comunicação entre agencias	| Essencial | 
+|6	| Segurança na compra e venda de pacotes	| Essencial | 
+|7	| Ajude na comunicação entre agencias	| Recomendável | 
 
 ## 3.3 Descrição geral do produto
 
