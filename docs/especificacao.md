@@ -128,9 +128,8 @@ A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a i
 
 | # | Nome | Descrição |
 |--------------------|------------------------------------|----------------------------------------|
-| 1	|	Aluno |	Cadastro de informações relativas aos alunos. |
-| 2	| Curso |	Cadastro geral de cursos de aperfeiçoamento. |
-| 3 |	Matrícula |	Cadastro de Matrículas de alunos nos cursos. |
-| 4 |	Turma |	Cadastro de turmas.
-| 5	|	Professor |	Cadastro geral de professores que ministram as disciplinas. |
+| 1	|	Turista |	Cadastro das informações referentes aos turistas. |
+| 2	| Admin |	Cadastro de informações referentes aos administradores do sistema. |
+| 3 |	Compra |	Transação de aquisição do pacote de viagem. |
+| 4 |	Pacote |	Cadastro geral dos pacotes de viagem. |
 | ... |	... |	... |
