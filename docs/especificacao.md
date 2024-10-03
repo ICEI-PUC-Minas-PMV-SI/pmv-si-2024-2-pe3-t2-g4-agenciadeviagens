@@ -133,16 +133,21 @@ Fluxo Principal:
 3) Reembolso passa por análise do Gerente de Agência de Viagens
 
 Fluxo alternativo(2): Faltam mais de 90 dias
+
 a) O usuário receberá 75% do valor da compra.
 
 Fluxo alternativo(2): Faltam mais de 30 dias
+
 a) O usuário receberá 50% do valor da compra.
 
 Fluxo alternativo(2): Faltam mais de 15 dias
+
 a) O usuário receberá 35% do valor da compra.
 
 Fluxo alternativo(2): Faltam mais de 7 dias
+
 a) O usuário receberá 10% do valor da compra.
+
 Pós-condições: O usuário concluirá sua solicitação de reembolso e recebrá o valor em até 3 dias úteis.
 
 ### Solicitar Suporte(CSU05)
@@ -159,21 +164,27 @@ Fluxo Principal:
 5) Após a resolução do probelma, se o usuário ainda tiver alguma dúvida o caso de uso retorna ao passo 2, caso contrário o caso de uso termina.
 
 Fluxo Alternativo(3): Reembolso
+
 a)O usuário é direcionado para o setor de suporte de reembolso.
 
 Fluxo Alternativo(3): Reserva de Viagem
+
 a)O usuário é direcionado para o setor de suporte de reserva de viagem.
 
 Fluxo Alternativo(3): Avaliar Viagem
+
 a)O usuário é direcionado para o setor de suporte de avaliação de viagem.
 
 Fluxo Alternativo(3): Login
+
 a)O usuário é direcionado para o setor de suporte de login.
 
 Fluxo Alternativo(3): Pesquisa de Viagem
+
 a)O usuário é direcionado para o setor de suporte de pesquisa de viagem.
 
 Fluxo Alternativo(3): Gerenciamento de viagem.
+
 a)O usuário é direcionado para o setor de suporte de gerenciamento de viagem.
 
 Pós-condições:O problema será resolvido e anotado para análise e manuntenção.
