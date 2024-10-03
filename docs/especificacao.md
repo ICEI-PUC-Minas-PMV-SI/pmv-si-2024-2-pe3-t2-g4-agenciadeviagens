@@ -73,8 +73,11 @@ Cada caso de uso deve ter a sua descrição representada nesta seção. Exemplo:
 
 ### Entrar no sistema (CSU01)
 Sumário: O usuário comum realiza o acesso ao sistema.
+
 Ator Primário:Usuário comum ou Gerente de Agência de Viagens.
+
 Ator Secundário: Não Possui.
+
 Pré-condiçoes:Usuário deve estar cadastrado no sistema.
 
 Fluxo Principal:
@@ -87,8 +90,11 @@ Pós-condições: O usuáio entra no sistema e tem acesso às suas infromaç~oes
 
 ### Reservar Viagem(CSU02)
 Sumário: O usuário comum realiza a reserva de um pacote de viagem.
+
 Ator Primário: Usuário Comum.
+
 Ator Secundário: Não possui.
+
 Pré-condições: Usuário deve fazer o login no sistema.
 
 Fluxo Principal:
@@ -99,8 +105,11 @@ Pós-condições: O usuário conclui a compra do pacote
 
 ### Avaliar Viagem (CSU03)
 Sumário: O usuário comum realiza uma avaliação de um pacote de viagem que ele já utilizou.
+
 Ator Primário: Usuário comum.
+
 Ator Secundário: Não possui.
+
 Pré-condiçoes:O usuário deve ter feito o login e já ter concluído a viagem que ele irá avaliar.
 
 Fluxo Principal:
@@ -109,9 +118,13 @@ Fluxo Principal:
 Pós-condições: Uma avaliação foi adicionada à aquela viagem selecionada.
 
 ### Solicitar Reembolso(CSU04)
+
 Sumário:O usuário comum realiza um pedido de reembolso.
+
 Ator Primário: Usuário comum.
+
 Ator Secundário: Gerente da agência de viagens.
+
 Pré-condiçoes: O usuário deve fazer login e já ter feito alguma compra para poder solicitar o reembolso.
 
 Fluxo Principal:
@@ -166,10 +179,12 @@ a)O usuário é direcionado para o setor de suporte de gerenciamento de viagem.
 Pós-condições:O problema será resolvido e anotado para análise e manuntenção.
 
 ### Sair do Sistema (CSU08)
-
 Sumário: O usuário comum sai do sistema.
+
 Ator Primário: Usuário Comum ou Gerente de Agência.
+
 Ator Secundário: Não possui.
+
 Pré-condições: Usuário deve estar cadastrado no sistema.
 
 Fluxo Principal:
