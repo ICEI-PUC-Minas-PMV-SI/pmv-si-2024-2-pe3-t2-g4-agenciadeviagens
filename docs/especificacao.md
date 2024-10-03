@@ -71,50 +71,116 @@ Como observado no diagrama de casos de uso da Figura 1, a secretária poderá ge
 
 Cada caso de uso deve ter a sua descrição representada nesta seção. Exemplo:
 
-#### Gerenciar Professor (CSU01)
-
-Sumário: A Secretária realiza a gestão (inclusão, remoção, alteração e consulta) dos dados sobre professores.
-
-Ator Primário: Secretária.
-
-Ator Secundário: Coordenador.
-
-Pré-condições: A Secretária deve ser validada pelo Sistema.
+### Entrar no sistema (CSU01)
+Sumário: O usuário comum realiza o acesso ao sistema.
+Ator Primário:Usuário comum ou Gerente de Agência de Viagens.
+Ator Secundário: Não Possui.
+Pré-condiçoes:Usuário deve estar cadastrado no sistema.
 
 Fluxo Principal:
+1) O usuário comum informa o usuário de login e senha.
+2) O Sistema Realiza a validação de senha informada.
+3) Se o usuário comum iformou a senha errada, o sistema apresenta mensagem de erro "Senha Incorreta" e o caso de uso retorna ao passo 1; caso contrário o caso de uso termina;
+   
+Pós-condições: O usuáio entra no sistema e tem acesso às suas infromaç~oes e funcionalidades
 
-1) 	A Secretária requisita manutenção de professores.
-2) 	O Sistema apresenta as operações que podem ser realizadas: inclusão de um novo professor, alteração de um professor, a exclusão de um professor e a consulta de dados de um professor.
-3) 	A Secretária seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
-4) 	Se a Secretária desejar continuar com a gestão de professores, o caso de uso retorna ao passo 2; caso contrário o caso de uso termina.
 
-Fluxo Alternativo (3): Inclusão
+### Reservar Viagem(CSU02)
+Sumário: O usuário comum realiza a reserva de um pacote de viagem.
+Ator Primário: Usuário Comum.
+Ator Secundário: Não possui.
+Pré-condições: Usuário deve fazer o login no sistema.
 
-a)	A Secretária requisita a inclusão de um professor. <br>
-b)	O Sistema apresenta uma janela solicitando o CPF do professor a ser cadastrado. <br>
-c)	A Secretária fornece o dado solicitado. <br>
-d)	O Sistema verifica se o professor já está cadastrado. Se sim, o Sistema reporta o fato e volta ao início; caso contrário, apresenta um formulário em branco para que os detalhes do professor (Código, Nome, Endereço, CEP, Estado, Cidade, Bairro, Telefone, Identidade, Sexo, Fax, CPF, Data do Cadastro e Observação) sejam incluídos. <br>
-e)	A Secretária fornece os detalhes do novo professor. <br>
-f)	O Sistema verifica a validade dos dados. Se os dados forem válidos, inclui o novo professor e a grade listando os professores cadastrados é atualizada; caso contrário, o Sistema reporta o fato, solicita novos dados e repete a verificação. <br>
+Fluxo Principal:
+1) O usuário pesquisa um pacote de viagem de seu interesse.
+2) O usuário escolhe um hotel, voo, e uma data e a opção que mais deseja entre as possibilidades.
+3) O usuário efetua o pagamento
+Pós-condições: O usuário conclui a compra do pacote
 
-Fluxo Alternativo (3): Remoção
+### Avaliar Viagem (CSU03)
+Sumário: O usuário comum realiza uma avaliação de um pacote de viagem que ele já utilizou.
+Ator Primário: Usuário comum.
+Ator Secundário: Não possui.
+Pré-condiçoes:O usuário deve ter feito o login e já ter concluído a viagem que ele irá avaliar.
 
-a)	A Secretária seleciona um professor e requisita ao Sistema que o remova. <br>
-b)	Se o professor pode ser removido, o Sistema realiza a remoção; caso contrário, o Sistema reporta o fato. <br>
+Fluxo Principal:
+1) O usuário acessa as viagens concluídas por ele e seleciona qual deseja avaliar.
+2) O usuário faz uma avaliação com um medidor de 0 a 5 estrelas, além de um texto de no mínimo 100 caracteres descrevendo sua experiência.
+Pós-condições: Uma avaliação foi adicionada à aquela viagem selecionada.
 
-Fluxo Alternativo (3): Alteração
+### Solicitar Reembolso(CSU04)
+Sumário:O usuário comum realiza um pedido de reembolso.
+Ator Primário: Usuário comum.
+Ator Secundário: Gerente da agência de viagens.
+Pré-condiçoes: O usuário deve fazer login e já ter feito alguma compra para poder solicitar o reembolso.
 
-a)	A Secretária altera um ou mais dos detalhes do professor e requisita sua atualização. <br>
-b)	O Sistema verifica a validade dos dados e, se eles forem válidos, altera os dados na lista de professores, caso contrário, o erro é reportado. <br>
- 
-Fluxo Alternativo (3): Consulta
+Fluxo Principal:
+1) O usuário solicita o reembolso de uma compra feita por ele.
+2) O sistema análisa o tempo restante para o início da viagem.
+3) Reembolso passa por análise do Gerente de Agência de Viagens
 
-a)	A Secretária opta por pesquisar pelo nome ou código e solicita a consulta sobre a lista de professores. <br>
-b)	O Sistema apresenta uma lista professores. <br>
-c)	A Secretária seleciona o professor. <br>
-d)	O Sistema apresenta os detalhes do professor no formulário de professores. <br>
+Fluxo alternativo(2): Faltam mais de 90 dias
+a) O usuário receberá 75% do valor da compra.
 
-Pós-condições: Um professor foi inserido ou removido, seus dados foram alterados ou apresentados na tela.
+Fluxo alternativo(2): Faltam mais de 30 dias
+a) O usuário receberá 50% do valor da compra.
+
+Fluxo alternativo(2): Faltam mais de 15 dias
+a) O usuário receberá 35% do valor da compra.
+
+Fluxo alternativo(2): Faltam mais de 7 dias
+a) O usuário receberá 10% do valor da compra.
+Pós-condições: O usuário concluirá sua solicitação de reembolso e recebrá o valor em até 3 dias úteis.
+
+### Solicitar Suporte(CSU05)
+Sumário:O usuário comum inicia uma nova solicitação de suporte
+Ator Primário:Usuário comum
+Ator Secundário:Não possui
+Pré-condiçoes:Usuário deve fazer login.
+
+Fluxo Principal:
+1) O usuário comum informa a necessidade de suporte.
+2) O sistema aprensenta opções de setores de dúvidas: Reembolso, Reserva de viagem, Avaliar viagem, Login, Pesquisa de viagem, Gerenciamento de Viagens.
+3) O usuário comum seleciona o setor com dúvida: Reembolso, Reserva de viagem, Avaliar viagem, Login, Pesquisa de viagem, Gerenciamento de Viagens e já informa o motivo da solicitação do suporte.
+4) O sistema deve responder em no máximo 24 horas.
+5) Após a resolução do probelma, se o usuário ainda tiver alguma dúvida o caso de uso retorna ao passo 2, caso contrário o caso de uso termina.
+
+Fluxo Alternativo(3): Reembolso
+a)O usuário é direcionado para o setor de suporte de reembolso.
+
+Fluxo Alternativo(3): Reserva de Viagem
+a)O usuário é direcionado para o setor de suporte de reserva de viagem.
+
+Fluxo Alternativo(3): Avaliar Viagem
+a)O usuário é direcionado para o setor de suporte de avaliação de viagem.
+
+Fluxo Alternativo(3): Login
+a)O usuário é direcionado para o setor de suporte de login.
+
+Fluxo Alternativo(3): Pesquisa de Viagem
+a)O usuário é direcionado para o setor de suporte de pesquisa de viagem.
+
+Fluxo Alternativo(3): Gerenciamento de viagem.
+a)O usuário é direcionado para o setor de suporte de gerenciamento de viagem.
+
+Pós-condições:O problema será resolvido e anotado para análise e manuntenção.
+
+### Sair do Sistema (CSU08)
+
+Sumário: O usuário comum sai do sistema.
+Ator Primário: Usuário Comum ou Gerente de Agência.
+Ator Secundário: Não possui.
+Pré-condições: Usuário deve estar cadastrado no sistema.
+
+Fluxo Principal:
+1) O usuário comum acessa a função de saída.
+2) O Sistema realiza o deslogue da conta.
+3) Se o Usuário comum estiver com um processo em andamento, o sistema informa
+que ele está com um processo em andamento e confirma com a seguinte
+mensagem "Você possui dados não salvos que serão excluídos, deseja sair
+mesmo assim?”, se ele clicar em não, o caso de uso retorna ao passo 1; caso
+contrário o caso de uso termina.
+Pós-condições: O usuário saiu do sistema.
 
 ### 3.4.3 Diagrama de Classes 
 
