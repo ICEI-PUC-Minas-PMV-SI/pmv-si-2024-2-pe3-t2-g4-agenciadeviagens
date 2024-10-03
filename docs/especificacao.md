@@ -54,8 +54,8 @@ O SAV pode vender pacotes e fornecer informações, mas não oferece acompanhame
 
 | Ator | Descrição |
 |--------------------|------------------------------------|
-| Coordenador |	Usuário gerente do sistema responsável pelo cadastro e manutenção de cursos de aperfeiçoamento. Possui acesso geral ao sistema. |
-| Secretaria |	Usuário responsável por registros de alunos, professores, turmas e gerência de matrículas. |
+| Usúario comum|	Usuário responsável por compra de pacotes de viagem, avaliá-los, consultar pacotes, se cadastrar,solicitar reembolsos e suporte |
+| Gerente de agência |	Usuário gerente do sistema, resposável pela administração dos fornecedores, bloqueios de usuários, e gerenciar pacotes. Possui acesso geral ao sistema|
 | ... |	... |	... |
 
 ## 3.4 Modelagem do Sistema
