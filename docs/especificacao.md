@@ -36,10 +36,13 @@ O SAV pode vender pacotes e fornecer informações, mas não oferece acompanhame
 
 | Código | Requisito Funcional (Funcionalidade) | Descrição |
 |--------------------|------------------------------------|----------------------------------------|
-| RF1 | Gerenciar Curso de Aperfeiçoamento |	Processamento de Inclusão, Alteração, Exclusão e Consulta de Cursos de Aperfeiçoamento |
-| RF2 |	Gerenciar Professor	| Processamento de Inclusão, Alteração, Exclusão e Consulta de professores |
-| RF3	| Gerenciar Matrícula |	Processamento de Inclusão, Alteração, Exclusão e Consulta de Matrículas de alunos em Cursos de Aperfeiçoamento |
-| ... |	...	| ... |
+| RF1 | Gerenciar Pacotes de Viagem | Processamento de inclusão  alteração, exclusão e consulta de pacotes de viagem (ex.: destinos, preços, duração) |
+| RF2 | Gerenciar Reservas | Processamento de inclusão, alteração , exclusão e consulta de reservas (ex.: reservas de hotéis, passagens aéreas, transfers) |
+| RF3 | Gerenciar Clientes | Processamento de inclusão, alteração , exclusão e consulta de dados de clientes (ex.: nome, contato, histórico de viagens) |
+| RF4 | Gerenciar Pagamentos | Processamento de inclusão, alteração  exclusão e consulta de pagamentos (ex.: métodos de pagamento, confirmação de pagamento, reembolsos) |
+| RF5 | Gerenciar Relatórios | Consulta e geração de relatórios analíticos sobre vendas, reservas, preferências de clientes e outros dados operacionais |
+
+
 
 ### 3.3.2 Requisitos Não Funcionais
 
