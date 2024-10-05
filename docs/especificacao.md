@@ -70,7 +70,7 @@ Como observado no diagrama de casos de uso da Figura 1, a secretária poderá ge
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
-![Diagrama de Casos de Uso](docs/images/CasosDeUso.png)
+![Diagrama de Casos de Uso](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe3-t2-g4-agenciadeviagens/blob/main/docs/images/CasosDeUso.png)
  
 ### 3.4.2 Descrições de Casos de Uso
 
