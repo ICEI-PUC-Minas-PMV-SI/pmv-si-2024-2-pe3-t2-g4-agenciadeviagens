@@ -448,7 +448,7 @@ A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a i
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
-![Diagrama de Classes(https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe3-t2-g4-agenciadeviagens/blob/main/docs/images/Classes.png)
+![Diagrama de Classes](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe3-t2-g4-agenciadeviagens/blob/main/docs/images/Classes.png)
 
 ### 3.4.4 Descrições das Classes 
 
