@@ -46,12 +46,14 @@ O SAV pode vender pacotes e fornecer informações, mas não oferece acompanhame
 
 ### 3.3.2 Requisitos Não Funcionais
 
-| Código | Requisito Não Funcional (Restrição) |
-|--------------------|------------------------------------|
-| RNF1 | O ambiente operacional a ser utilizado é o Windows XP. |
-| RNF2 | O sistema deverá executar em um computador configurado com uma impressora de tecnologia laser ou de jato de tinta, a ser usada para impressão dos relatórios. |
-| RNF3 |	Segurança	O produto deve restringir o acesso por meio de senhas individuais para o usuário. |
-| ... |	... |	... |
+| Código | Requisito Não Funcional | Descrição | Prioridade |
+|-------------|-------------|-------------|------------------------|
+| RNF1 | Responsivo | A aplicação deve se adaptar o layout do dispositivo.| Alta ||
+| RNF2 | Layout | Ter um layout intuitivo e de fácil compreensão para os usuários. | Alta ||
+| RNF3 |	Requisição | Deve processar requisições do usuário em no máximo 3s | Baixa ||
+| RNF4 |	Disponibilidade |	Sistema deve funcionar 24hrs, 7 dias na semana | Média ||
+| RNF5 |	Manutenibilidade |	O sistema deve ser modular para facilitar a manutenção e atualização. | Média ||
+| RNF6 |	Confiabilidade |	Os dados do usuário devem ser protegidos contra acesso não autorizado. |	Alta ||
 
 ### 3.3.3 Usuários 
 
