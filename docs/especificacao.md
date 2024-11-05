@@ -1,9 +1,7 @@
 # 3. DOCUMENTO DE ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE
 
-Nesta parte do trabalho você deve detalhar a documentação dos requisitos do sistema proposto de acordo com as seções a seguir. Ressalta-se que aqui é utilizado como exemplo um sistema de gestão de cursos de aperfeiçoamento.
-
 ## 3.1 Objetivos deste documento
-Descrever e especificar as necessidades da Coordenação do Curso de Sistemas de Informação da PUC Minas que devem ser atendidas pelo projeto SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento.
+Descrever e especificar as necessidades da Agência de Viagens que devem ser atendidas pelo projeto  SAV - Sistema de Agência de Viagens .
 
 ## 3.2 Escopo do produto
 
@@ -66,15 +64,12 @@ O SAV pode vender pacotes e fornecer informações, mas não oferece acompanhame
 ## 3.4 Modelagem do Sistema
 
 ### 3.4.1 Diagrama de Casos de Uso
-Como observado no diagrama de casos de uso da Figura 1, a secretária poderá gerenciar as matrículas e professores no sistema, enquanto o coordenador, além dessas funções, poderá gerenciar os cursos de aperfeiçoamento.
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
 ![Diagrama de Casos de Uso](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe3-t2-g4-agenciadeviagens/blob/main/docs/images/CasosDeUso.png)
  
 ### 3.4.2 Descrições de Casos de Uso
-
-Cada caso de uso deve ter a sua descrição representada nesta seção. Exemplo:
 
 ### Entrar no sistema (CSU01)
 Sumário: O usuário comum realiza o acesso ao sistema.
@@ -443,8 +438,6 @@ d) O Sistema exibe os detalhes do fornecedor selecionado no formulário.
 Pós-condições: Um fornecedor foi inserido, removido, seus dados foram alterados ou consultados.
 
 ### 3.4.3 Diagrama de Classes 
-
-A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a identificação do funcionário responsável pelo registro, bem com os dados do aluno e turmas. Para uma disciplina podemos ter diversas turmas, mas apenas um professor responsável por ela.
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
