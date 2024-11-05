@@ -45,6 +45,10 @@ O SAV pode vender pacotes e fornecer informações, mas não oferece acompanhame
 | RF8 | Gerenciar Usuário | Processamento de inclusão, alteração , exclusão e consulta de dados de clientes (ex.: nome, contato, histórico de viagens) |
 | RF9 | Gerenciar Pagamentos | Processamento de inclusão, alteração  exclusão e consulta de pagamentos (ex.: métodos de pagamento, confirmação de pagamento, reembolsos) |
 | RF10 | Gerenciar Relatórios | Consulta e geração de relatórios analíticos sobre vendas, reservas, preferências de clientes e outros dados operacionais |
+| RF11 | Entrar No Sistema | Processamento de login de cadastro |
+| RF12 | Sair do sistema | Processamento de logout de cadastro |
+| RF13 | Validação da senha | Processamento de validação de cadastro |
+
 
 
 
