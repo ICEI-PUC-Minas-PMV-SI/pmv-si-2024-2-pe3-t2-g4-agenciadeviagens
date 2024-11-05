@@ -40,8 +40,8 @@ O SAV pode vender pacotes e fornecer informações, mas não oferece acompanhame
 | RF3 | Reservar Viagem | Processamento inclusão de reserva de um pacote de viagem |
 | RF4 | Gerenciar avaliação de Viagem | Processamento de Inclusão, Alteração, Exclusão e Consulta de avaliação de viagem |
 | RF5 | Gerenciar "Reservas" | Processamento de Inclusão, Alteração, Exclusão e Consulta de itens na "Reservas"(pacotes de viagem que o usuário ja possui) |
-| RF7 | Gerenciar Pacotes de Viagem | Processamento de inclusão  alteração, exclusão e consulta de pacotes de viagem (ex.: destinos, preços, duração) |
 | RF6 | Solicitar Reembolso | Solicitar reembolso pelo cancelamento de um pacote de viagem |
+| RF7 | Gerenciar Pacotes de Viagem | Processamento de inclusão  alteração, exclusão e consulta de pacotes de viagem (ex.: destinos, preços, duração) |
 | RF8 | Gerenciar Usuário | Processamento de inclusão, alteração , exclusão e consulta de dados de clientes (ex.: nome, contato, histórico de viagens) |
 | RF9 | Gerenciar Pagamentos | Processamento de inclusão, alteração  exclusão e consulta de pagamentos (ex.: métodos de pagamento, confirmação de pagamento, reembolsos) |
 | RF10 | Gerenciar Relatórios | Consulta e geração de relatórios analíticos sobre vendas, reservas, preferências de clientes e outros dados operacionais |
