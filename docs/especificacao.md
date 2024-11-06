@@ -79,7 +79,7 @@ O SAV pode vender pacotes e fornecer informações, mas não oferece acompanhame
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
-![Diagrama de Casos de Uso](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe3-t2-g4-agenciadeviagens/blob/main/docs/images/CasosDeUso.png)
+![Diagrama de Casos de Uso](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe3-t2-g4-agenciadeviagens/blob/main/docs/images/CasosDeUso.jpg)
  
 ### 3.4.2 Descrições de Casos de Uso
 
