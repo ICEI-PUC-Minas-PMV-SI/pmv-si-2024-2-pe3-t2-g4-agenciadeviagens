@@ -126,29 +126,43 @@ Ator Secundário: Não possui.
 Pré-condiçoes:O usuário deve ter feito o login e já ter concluído a viagem que ele irá avaliar.
 
 Fluxo Principal:
-1) O usuário requisita a gestão de suas avaliações
+1) O usuário requisita a gestão de suas avaliações.
 2) O sistema apresenta as operações que podem ser realizadas: inclusão, exclusão, alteração e consulta por palavra que conste no título ou na descrição da avaliação
 3) O usuário comum seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finnalizar o caso de uso.
 4) Se o usuário comum desejar continuar com a gestão de suas receitas, o caso de uso retorna ao passo 2; caso contrario o caso de uso termina.
 
 FLUXO ALTERNATIVO(3): INCLUSÃO
+
 a) O usuário comum requisita a inclusão de uma avaliação.
+
 b) O sistema apresenta uma janela solicitando o título da avaliação a ser cadastrada, sua descrição, destino, companhia aérea, data e hotel.
+
 c) Após todos os campos serem preenchiodos e o usuário comum incluir a nova avaliação, a grade listando as avaliações cadastradas é atualizada.
 
 FLUXO ALTERNATIVO(3): EXCLUSÃO
+
 a) O usuário comum seleciona uma avaliação e requisita que o Sistema a remova.
+
 b) O sistema realiza a remoção.
 
 FLUXO ALTERNATIVO(3) ALTERAÇÃO
+
 a) O usuário comum seleciona a avaliação para edição, altera os dados e requisita a atualização.
+
 b) O Sistema altera os dados no cadastro da reserva.
 
 FLUXO ALTERNATIVO(3): CONSULTA
+
 a) O usuário comum opta por pesquisar pela palavra contida no título da avaliação ou na descrição dela e solicita a consulta sobre a lista de avaliações cadastradas por ele.
+
 b) O Sistema apresenta uma lista de avaliações.
-c) O usuário comum seleciona a avaliação
+
+c) O usuário comum seleciona a avaliação.
+
 d) O sistema apresenta os dados da avaliação.
+
+Pós-condições: Uma avaliação foi inserida ou removida, seus dados foram alterados ou
+apresentados na tela
 
 ### Solicitar Reembolso(CSU04)
 
@@ -188,7 +202,7 @@ título da viagem ou na sua descrição.
 4) Se o usuário comum desejar continuar com a consulta de receita, o caso de uso
 retorna ao passo 2; caso contrário, o caso de uso termina.
 
-Pós-condições: Uma receita foi consultada, seus dados foram apresentados na tela
+Pós-condições: Uma viagem foi consultada, seus dados foram apresentados na tela
 
 
 ### Gerenciar "Reservas" (CSU06)
@@ -207,18 +221,29 @@ Fluxo Principal:
 4) Se o usuário comum desejar continuar com a gestão de suas receitas, o caso de uso retorna ao passo 2; caso contrario o caso de uso termina.
 
 FLUXO ALTERNATIVO(3): EXCLUSÃO
+
 a) O usuário comum seleciona uma reserva e requisita que o Sistema a remova.
+
 b) A reserva de uma viagem que vai acontecer ela entre em processo de reembolso.
 
 FLUXO ALTERNATIVO(3) ALTERAÇÃO
+
 a) O usuário comum seleciona a reserva para edição, altera os dados e requisita a atualização.
+
 b) O Sistema altera os dados no cadastro da reserva.
 
 FLUXO ALTERNATIVO(3): CONSULTA
+
 a) O usuário comum opta por pesquisar pela palavra contida no título da reserva ou na descrição dela e solicita a consulta sobre a lista de reserva feitas por ele.
+
 b) O Sistema apresenta uma lista de reserva.
+
 c) O usuário comum seleciona a reserva.
+
 d) O sistema apresenta os dados da reserva.
+
+Pós-condições: Uma reserva removida, seus dados foram alterados ou
+apresentados na tela.
 
 ### GERENCIAR USUÁRIOS (CSU07)
 
@@ -242,36 +267,52 @@ opta por finalizar o caso de uso.
 retorna ao passo 2; caso contrário o caso de uso termina.
 
 Fluxo Alternativo (3): Inclusão
+
 a) O Administrador requisita a inclusão de um usuário comum.
+
 b) O Sistema apresenta uma janela solicitando o e-mail do usuário a ser cadastrado.
+
 c) O Administrador fornece o dado solicitado.
+
 d) O Sistema verifica se o usuário já está cadastrado. Se sim, o Sistema reporta o
 fato e volta ao início; caso contrário, apresenta um formulário em branco para que
 os detalhes do usuário comum (login, senha, email, nome, sobrenome e data de
 nascimento) sejam incluídos.
+
 e) O Administrador fornece os detalhes do novo usuário comum.
+
 f) O Sistema verifica a validade dos dados. Se os dados forem válidos, inclui o novo
 usuário comum e a grade listando os usuários comuns cadastrados é atualizada;
 caso contrário, o Sistema reporta o fato, solicita novos dados e repete a
 verificação.
 
 Fluxo Alternativo (3): Alteração
+
 a) O Administrador altera um detalhe, ou mais, do usuário comum e requisita sua
 atualização.
+
 b) O Sistema verifica a validade dos dados e, se eles forem válidos, altera os dados
 na lista de usuários comuns, caso contrário, o erro é reportado.
+
 Fluxo Alternativo (3): Consulta
+
 a) O Administrador opta por pesquisar pelo nome ou código e solicita a consulta
 sobre a lista de usuários comuns.
+
 b) O Sistema apresenta uma lista de usuários comuns.
+
 c) O Administrador seleciona um usuário comum.
+
 d) O Sistema apresenta os detalhes do usuário comum no formulário de usuários
 comuns.
 
 Fluxo Alternativo (3): Bloqueio
+
 a) O Administrador seleciona um usuário comum e requisita ao Sistema que o
 bloqueie.
+
 b) O Sistema realiza o bloqueio do usuário comum.
+
 Pós-condições: Um usuário comum foi inserido ou bloqueado, seus dados foram
 alterados ou apresentados na tela.
 
@@ -305,10 +346,10 @@ Pré-condições: O Gerente de Agência deve ser validado pelo Sistema.
 
 Fluxo Principal:
 
-1. O Gerente de Agência requisita a manutenção de pacotes de viagens.
-2. O Sistema apresenta as operações disponíveis: inclusão de um novo pacote, alteração de um pacote existente, exclusão de um pacote ou 3. consulta de pacotes cadastrados.
-4. O Gerente de Agência seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
-Se o Gerente desejar continuar a gestão de pacotes, o caso de uso retorna ao passo 2; caso contrário, o caso de uso termina.
+1) O Gerente de Agência requisita a manutenção de pacotes de viagens.
+2) O Sistema apresenta as operações disponíveis: inclusão de um novo pacote, alteração de um pacote existente, exclusão de um pacote ou consulta de pacotes cadastrados.
+3) O Gerente de Agência seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
+4)Se o Gerente desejar continuar a gestão de pacotes, o caso de uso retorna ao passo 2; caso contrário, o caso de uso termina.
 
 Fluxo Alternativo (3): Inclusão
 
@@ -359,9 +400,12 @@ Fluxo Principal:
 4. O Gerente de Agência seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
 Se o Gerente desejar continuar a gestão de pagamentos, o caso de uso retorna ao passo 2; caso contrário, o caso de uso termina.
 
-Flixo Alternativo (3) Reembolso
+Fluxo Alternativo (3) Reembolso
+
 a) O Gerente seleciona um caso de reembolso para analisar.
+
 b) Após a analise ele decide se o reembolso acontecerá ou não.
+
 c) A solicitação de reembolso é retirada da lista de reembolso.
 
 Fluxo Alternativo (3): Inclusão
