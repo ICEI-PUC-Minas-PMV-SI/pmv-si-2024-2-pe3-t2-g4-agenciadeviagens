@@ -43,11 +43,10 @@ O SAV pode vender pacotes e fornecer informações, mas não oferece acompanhame
 | RF6 | Solicitar Reembolso | Solicitar reembolso pelo cancelamento de um pacote de viagem |
 | RF7 | Gerenciar Pacotes de Viagem | Processamento de inclusão  alteração, exclusão e consulta de pacotes de viagem (ex.: destinos, preços, duração) |
 | RF8 | Gerenciar Usuário | Processamento de inclusão, alteração , exclusão e consulta de dados de clientes (ex.: nome, contato, histórico de viagens) |
-| RF9 | Gerenciar Pagamentos | Processamento de inclusão, alteração  exclusão e consulta de pagamentos (ex.: métodos de pagamento, confirmação de pagamento, reembolsos) |
-| RF10 | Gerenciar Relatórios | Consulta e geração de relatórios analíticos sobre vendas, reservas, preferências de clientes e outros dados operacionais |
-| RF11 | Entrar No Sistema | Processamento de login de cadastro |
-| RF12 | Sair do sistema | Processamento de logout de cadastro |
-| RF13 | Validação da senha | Processamento de validação de cadastro |
+| RF9 | Gerenciar Pagamentos | Processamento de inclusão, alteração , exclusão e consulta de pagamentos (ex.: métodos de pagamento, confirmação de pagamento, reembolsos) |
+| RF10 | Entrar No Sistema | Processamento de login de cadastro |
+| RF11 | Sair do sistema | Processamento de logout de cadastro |
+| RF12 | Validação da senha | Processamento de validação de cadastro |
 
 
 
@@ -96,9 +95,9 @@ Pré-condiçoes:Usuário deve estar cadastrado no sistema.
 Fluxo Principal:
 1) O usuário comum informa o usuário de login e senha.
 2) O Sistema Realiza a validação de senha informada.
-3) Se o usuário comum iformou a senha errada, o sistema apresenta mensagem de erro "Senha Incorreta" e o caso de uso retorna ao passo 1; caso contrário o caso de uso termina;
+3) Se o usuário comum informou a senha errada, o sistema apresenta mensagem de erro "Senha Incorreta" e o caso de uso retorna ao passo 1; caso contrário o caso de uso termina;
    
-Pós-condições: O usuáio entra no sistema e tem acesso às suas infromaç~oes e funcionalidades
+Pós-condições: O usuário entra no sistema e tem acesso às suas infromaç~oes e funcionalidades
 
 
 ### Reservar Viagem(CSU02)
@@ -113,11 +112,12 @@ Pré-condições: Usuário deve fazer o login no sistema.
 Fluxo Principal:
 1) O usuário pesquisa um pacote de viagem de seu interesse.
 2) O usuário escolhe um hotel, voo, e uma data e a opção que mais deseja entre as possibilidades.
-3) O usuário efetua o pagamento
+3) O usuário efetua o pagamento.
+4) O Sistema atualiza as reservas do usuário com o pacote de viagem comprado.
 Pós-condições: O usuário conclui a compra do pacote
 
-### Avaliar Viagem (CSU03)
-Sumário: O usuário comum realiza uma avaliação de um pacote de viagem que ele já utilizou.
+### Gerenciar Avaliação de Viagem (CSU03)
+Sumário: O usuário comum realiza a gestão (inclusão, alteração, exclusão e consulta) de um pacote de viagem que ele já utilizou.
 
 Ator Primário: Usuário comum.
 
@@ -126,9 +126,29 @@ Ator Secundário: Não possui.
 Pré-condiçoes:O usuário deve ter feito o login e já ter concluído a viagem que ele irá avaliar.
 
 Fluxo Principal:
-1) O usuário acessa as viagens concluídas por ele e seleciona qual deseja avaliar.
-2) O usuário faz uma avaliação com um medidor de 0 a 5 estrelas, além de um texto de no mínimo 100 caracteres descrevendo sua experiência.
-Pós-condições: Uma avaliação foi adicionada à aquela viagem selecionada.
+1) O usuário requisita a gestão de suas avaliações
+2) O sistema apresenta as operações que podem ser realizadas: inclusão, exclusão, alteração e consulta por palavra que conste no título ou na descrição da avaliação
+3) O usuário comum seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finnalizar o caso de uso.
+4) Se o usuário comum desejar continuar com a gestão de suas receitas, o caso de uso retorna ao passo 2; caso contrario o caso de uso termina.
+
+FLUXO ALTERNATIVO(3): INCLUSÃO
+a) O usuário comum requisita a inclusão de uma avaliação.
+b) O sistema apresenta uma janela solicitando o título da avaliação a ser cadastrada, sua descrição, destino, companhia aérea, data e hotel.
+c) Após todos os campos serem preenchiodos e o usuário comum incluir a nova avaliação, a grade listando as avaliações cadastradas é atualizada.
+
+FLUXO ALTERNATIVO(3): EXCLUSÃO
+a) O usuário comum seleciona uma avaliação e requisita que o Sistema a remova.
+b) O sistema realiza a remoção.
+
+FLUXO ALTERNATIVO(3) ALTERAÇÃO
+a) O usuário comum seleciona a avaliação para edição, altera os dados e requisita a atualização.
+b) O Sistema altera os dados no cadastro da reserva.
+
+FLUXO ALTERNATIVO(3): CONSULTA
+a) O usuário comum opta por pesquisar pela palavra contida no título da avaliação ou na descrição dela e solicita a consulta sobre a lista de avaliações cadastradas por ele.
+b) O Sistema apresenta uma lista de avaliações.
+c) O usuário comum seleciona a avaliação
+d) O sistema apresenta os dados da avaliação.
 
 ### Solicitar Reembolso(CSU04)
 
@@ -136,149 +156,124 @@ Sumário:O usuário comum realiza um pedido de reembolso.
 
 Ator Primário: Usuário comum.
 
-Ator Secundário: Gerente da agência de viagens.
+Ator Secundário: Administrador.
 
 Pré-condiçoes: O usuário deve fazer login e já ter feito alguma compra para poder solicitar o reembolso.
 
 Fluxo Principal:
 1) O usuário solicita o reembolso de uma compra feita por ele.
-2) O sistema análisa o tempo restante para o início da viagem.
-3) Reembolso passa por análise do Gerente de Agência de Viagens
+2) O sistema análisa o tempo restante para o início da viagem, caso faltarem menos de 30 dias o caso de uso é finalizado.
+3) Reembolso passa por análise do administrador.
 
-Fluxo alternativo(2): Faltam mais de 90 dias
 
-a) O usuário receberá 75% do valor da compra.
+Pós-condições: O usuário concluirá sua solicitação de reembolso e receberá o valor em até 15 dias úteis.
 
-Fluxo alternativo(2): Faltam mais de 30 dias
+### Pesquisar Viagem (CSU05)
 
-a) O usuário receberá 50% do valor da compra.
-
-Fluxo alternativo(2): Faltam mais de 15 dias
-
-a) O usuário receberá 35% do valor da compra.
-
-Fluxo alternativo(2): Faltam mais de 7 dias
-
-a) O usuário receberá 10% do valor da compra.
-
-Pós-condições: O usuário concluirá sua solicitação de reembolso e recebrá o valor em até 3 dias úteis.
-
-### Solicitar Suporte(CSU05)
-Sumário:O usuário comum inicia uma nova solicitação de suporte
-Ator Primário:Usuário comum
-Ator Secundário:Não possui
-Pré-condiçoes:Usuário deve fazer login.
-
-Fluxo Principal:
-1) O usuário comum informa a necessidade de suporte.
-2) O sistema aprensenta opções de setores de dúvidas: Reembolso, Reserva de viagem, Avaliar viagem, Login, Pesquisa de viagem, Gerenciamento de Viagens.
-3) O usuário comum seleciona o setor com dúvida: Reembolso, Reserva de viagem, Avaliar viagem, Login, Pesquisa de viagem, Gerenciamento de Viagens e já informa o motivo da solicitação do suporte.
-4) O sistema deve responder em no máximo 24 horas.
-5) Após a resolução do probelma, se o usuário ainda tiver alguma dúvida o caso de uso retorna ao passo 2, caso contrário o caso de uso termina.
-
-Fluxo Alternativo(3): Reembolso
-
-a)O usuário é direcionado para o setor de suporte de reembolso.
-
-Fluxo Alternativo(3): Reserva de Viagem
-
-a)O usuário é direcionado para o setor de suporte de reserva de viagem.
-
-Fluxo Alternativo(3): Avaliar Viagem
-
-a)O usuário é direcionado para o setor de suporte de avaliação de viagem.
-
-Fluxo Alternativo(3): Login
-
-a)O usuário é direcionado para o setor de suporte de login.
-
-Fluxo Alternativo(3): Pesquisa de Viagem
-
-a)O usuário é direcionado para o setor de suporte de pesquisa de viagem.
-
-Fluxo Alternativo(3): Gerenciamento de viagem.
-
-a)O usuário é direcionado para o setor de suporte de gerenciamento de viagem.
-
-Pós-condições:O problema será resolvido e anotado para análise e manuntenção.
-
-### Gerenciar Viagens (CSU06)
-Sumário: O Usuário Comum realiza a gestão de suas viagens, podendo gerenciar viagens futuras, pacotes de viagem favoritos e consultar viagens já concluídas.
+Sumário: O usuário comum realiza a consulta de uma viagem cadastrada no
+sistema.
 
 Ator Primário: Usuário Comum.
 
-Pré-condições: O Usuário Comum deve estar autenticado no sistema.
+Ator Secundário: Não possui.
+
+Pré-condições: Não Possui.
 
 Fluxo Principal:
+1) O usuário comum requisita a consulta de uma viagem cadastrada no
+sistema.
+2) O Sistema apresenta as operações de busca de receita por palavra que conste no
+título da viagem ou na sua descrição.
+3) O usuário comum seleciona a Consulta, ou opta por finalizar o caso de uso.
+4) Se o usuário comum desejar continuar com a consulta de receita, o caso de uso
+retorna ao passo 2; caso contrário, o caso de uso termina.
 
-1. O Usuário acessa a funcionalidade de Gerenciar Viagens.
-2. O Sistema apresenta as três opções disponíveis: Gerenciar Viagens Futuras, Gerenciar Pacotes de Viagem Favoritos ou Verificar Viagens Concluídas.
-3. O Usuário seleciona a operação desejada.
-4. O Sistema apresenta as informações relacionadas à opção selecionada.
-5. O Usuário pode realizar ações de inclusão, exclusão, alteração ou consulta relacionadas à operação escolhida, ou optar por encerrar o caso de uso.
+Pós-condições: Uma receita foi consultada, seus dados foram apresentados na tela
 
-Se o Usuário desejar realizar outra operação, o caso de uso retorna ao passo 2; caso contrário, o caso de uso termina.
 
-Fluxo Alternativo (1): Gerenciar Viagens Futuras
+### Gerenciar "Reservas" (CSU06)
+Sumário: O usuário comum realiza a gestão (alteração, exclusão e consulta) de uma reserva dele.
 
-a) O Usuário seleciona a opção "Gerenciar Viagens Futuras".
+Ator Primário: Usuário comum.
 
-b) O Sistema apresenta uma lista de viagens reservadas que ainda não foram realizadas.
+Ator Secundário: Não possui.
 
-c) O Usuário pode consultar os detalhes de uma viagem, alterar a reserva (se permitido), ou cancelar a viagem.
-
-d) O Sistema processa a solicitação e, se houver alterações, atualiza a lista de viagens futuras.
-
-Fluxo Alternativo (2): Gerenciar Pacotes de Viagem Favoritos
-
-a) O Usuário seleciona a opção "Gerenciar Pacotes de Viagem Favoritos".
-
-b) O Sistema apresenta uma lista de pacotes de viagem que o usuário marcou como favoritos.
-
-c) O Usuário pode consultar os detalhes de um pacote, remover da lista de favoritos, ou optar por reservar o pacote.
-
-d) O Sistema processa a solicitação e, se houver alterações, atualiza a lista de pacotes favoritos.
-
-Fluxo Alternativo (3): Verificar Viagens Concluídas
-
-a) O Usuário seleciona a opção "Verificar Viagens Concluídas".
-
-b) O Sistema apresenta uma lista de viagens que o usuário já realizou.
-
-c) O Usuário pode consultar os detalhes das viagens concluídas, incluindo destino, datas, e histórico de reservas, mas não pode alterá-las.
-
-d) O Usuário pode optar por retornar ao menu principal ou encerrar o caso de uso.
-Pós-condições: O Usuário Comum gerenciou suas viagens futuras, pacotes de viagem favoritos ou verificou viagens concluídas, realizando as devidas ações de consulta, alteração, inclusão ou exclusão.
-
-### Buscar Viagem (CSU07)
-Sumário: O Usuário Comum realiza a busca e consulta de pacotes de viagem disponíveis no sistema.
-
-Ator Primário: Usuário Comum.
-
-Pré-condições: O Usuário deve estar autenticado no sistema.
+Pré-condiçoes:O usuário deve ter feito o login.
 
 Fluxo Principal:
+1) O usuário requisita a gestão de suas reservas
+2) O sistema apresenta as operações que podem ser realizadas: exclusão, alteração e consulta por palavra que conste no título ou na descrição da avaliação
+3) O usuário comum seleciona a operação desejada: Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
+4) Se o usuário comum desejar continuar com a gestão de suas receitas, o caso de uso retorna ao passo 2; caso contrario o caso de uso termina.
 
-1. O Usuário acessa a funcionalidade de busca de pacotes de viagem.
-2. O Sistema solicita que o usuário forneça critérios de busca, como destino, data, duração, ou faixa de preço.
-3. O Usuário insere os critérios desejados e confirma a busca.
-4. O Sistema processa os critérios e apresenta uma lista de pacotes de viagem que correspondem aos parâmetros fornecidos.
-5. O Usuário pode selecionar um pacote para visualizar os detalhes.
-6. O Sistema exibe os detalhes completos do pacote de viagem, incluindo destino, data, preço, disponibilidade, descrição e condições.
-7. O Usuário pode optar por realizar outra busca, reservar a viagem ou encerrar o caso de uso.
+FLUXO ALTERNATIVO(3): EXCLUSÃO
+a) O usuário comum seleciona uma reserva e requisita que o Sistema a remova.
+b) A reserva de uma viagem que vai acontecer ela entre em processo de reembolso.
 
-Fluxo Alternativo (1): Busca sem Resultados
+FLUXO ALTERNATIVO(3) ALTERAÇÃO
+a) O usuário comum seleciona a reserva para edição, altera os dados e requisita a atualização.
+b) O Sistema altera os dados no cadastro da reserva.
 
-a) O Sistema não encontra pacotes de viagem que correspondam aos critérios fornecidos.
+FLUXO ALTERNATIVO(3): CONSULTA
+a) O usuário comum opta por pesquisar pela palavra contida no título da reserva ou na descrição dela e solicita a consulta sobre a lista de reserva feitas por ele.
+b) O Sistema apresenta uma lista de reserva.
+c) O usuário comum seleciona a reserva.
+d) O sistema apresenta os dados da reserva.
 
-b) O Sistema informa o Usuário que não foram encontrados resultados para os parâmetros especificados e oferece a opção de refinar a busca ou encerrar o caso de uso.
+### GERENCIAR USUÁRIOS (CSU07)
 
-Fluxo Alternativo (2): Pacote Indisponível
+Sumário: O usuário comum ou o administrador realiza a gestão (inclusão, alteração,
+consulta e bloqueio) dos usuários comuns.
 
-a) O Usuário seleciona um pacote que está indisponível (por exemplo, esgotado ou fora do período de validade).
+Ator Primário: Usuário comum ou Administrador.
 
-b) O Sistema informa o Usuário da indisponibilidade e oferece a opção de buscar outros pacotes ou encerrar o caso de uso.
-Pós-condições: O Usuário visualizou os pacotes de viagem disponíveis ou foi informado da ausência de resultados conforme os critérios de busca fornecidos.
+Ator Secundário: Não possui.
+
+Pré-condições: Usuário deve estar cadastrado no sistema como Administrador.
+
+Fluxo Principal:
+1) O Administrador requisita a gestão de usuários.
+2) O Sistema apresenta as operações que podem ser realizadas: a inclusão de um
+usuário comum, a alteração de um usuário comum, a busca de um usuário comum
+e o bloqueio.
+3) O Administrador seleciona a operação desejada: Inclusão, Exclusão, Consulta ou
+opta por finalizar o caso de uso.
+4) Se o usuário comum desejar continuar com a gestão de usuários, o caso de uso
+retorna ao passo 2; caso contrário o caso de uso termina.
+
+Fluxo Alternativo (3): Inclusão
+a) O Administrador requisita a inclusão de um usuário comum.
+b) O Sistema apresenta uma janela solicitando o e-mail do usuário a ser cadastrado.
+c) O Administrador fornece o dado solicitado.
+d) O Sistema verifica se o usuário já está cadastrado. Se sim, o Sistema reporta o
+fato e volta ao início; caso contrário, apresenta um formulário em branco para que
+os detalhes do usuário comum (login, senha, email, nome, sobrenome e data de
+nascimento) sejam incluídos.
+e) O Administrador fornece os detalhes do novo usuário comum.
+f) O Sistema verifica a validade dos dados. Se os dados forem válidos, inclui o novo
+usuário comum e a grade listando os usuários comuns cadastrados é atualizada;
+caso contrário, o Sistema reporta o fato, solicita novos dados e repete a
+verificação.
+
+Fluxo Alternativo (3): Alteração
+a) O Administrador altera um detalhe, ou mais, do usuário comum e requisita sua
+atualização.
+b) O Sistema verifica a validade dos dados e, se eles forem válidos, altera os dados
+na lista de usuários comuns, caso contrário, o erro é reportado.
+Fluxo Alternativo (3): Consulta
+a) O Administrador opta por pesquisar pelo nome ou código e solicita a consulta
+sobre a lista de usuários comuns.
+b) O Sistema apresenta uma lista de usuários comuns.
+c) O Administrador seleciona um usuário comum.
+d) O Sistema apresenta os detalhes do usuário comum no formulário de usuários
+comuns.
+
+Fluxo Alternativo (3): Bloqueio
+a) O Administrador seleciona um usuário comum e requisita ao Sistema que o
+bloqueie.
+b) O Sistema realiza o bloqueio do usuário comum.
+Pós-condições: Um usuário comum foi inserido ou bloqueado, seus dados foram
+alterados ou apresentados na tela.
 
 ### Sair do Sistema (CSU08)
 Sumário: O usuário comum sai do sistema.
@@ -301,56 +296,7 @@ contrário o caso de uso termina.
 
 Pós-condições: O usuário saiu do sistema.
 
-### Gerenciar Usuário (CSU09)
-Sumário: O Gerente de Agência realiza a gestão (inclusão, remoção, alteração e consulta) dos usuários do sistema.
-
-Ator Primário: Gerente de Agência.
-
-Ator Secundário: Usuário Comum.
-
-Pré-condições: O Gerente de Agência deve ser validado pelo Sistema.
-Fluxo Principal:
-
-1. O Gerente de Agência requisita a manutenção dos usuários.
-2. O Sistema apresenta as operações disponíveis: inclusão de um novo usuário, alteração de um usuário existente, exclusão de um usuário ou consulta dos usuários cadastrados.
-3. O Gerente de Agência seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
-Se o Gerente desejar continuar a gestão de usuários, o caso de uso retorna ao passo 2; caso contrário, o caso de uso termina.
-
-Fluxo Alternativo (1): Inclusão
-
-a) O Gerente requisita a inclusão de um novo usuário.
-
-b) O Sistema apresenta um formulário solicitando os dados do usuário (Nome, CPF, E-mail, Telefone, Endereço, Nome de Usuário, Senha, Nível de Acesso).
-
-c) O Gerente preenche os dados do novo usuário.
-
-d) O Sistema verifica a validade dos dados. Se válidos, o novo usuário é incluído e a lista de usuários é atualizada; caso contrário, o Sistema reporta o erro e solicita correções.
-
-Fluxo Alternativo (2): Remoção
-
-a) O Gerente seleciona um usuário e solicita sua remoção.
-
-b) Se o usuário pode ser removido (por exemplo, se não houver operações críticas associadas a ele), o Sistema realiza a remoção; caso contrário, o Sistema reporta o fato.
-
-Fluxo Alternativo (3): Alteração
-
-a) O Gerente altera um ou mais detalhes de um usuário existente e requisita a atualização.
-
-b) O Sistema verifica a validade dos dados e, se forem válidos, atualiza os dados do usuário na lista; caso contrário, o erro é reportado.
-
-Fluxo Alternativo (4): Consulta
-
-a) O Gerente opta por pesquisar usuários pelo nome, CPF ou nome de usuário.
-
-b) O Sistema apresenta a lista de usuários correspondentes.
-
-c) O Gerente seleciona o usuário desejado.
-
-d) O Sistema exibe os detalhes do usuário selecionado no formulário.
-
-Pós-condições: Um usuário foi inserido, removido, seus dados foram alterados ou consultados.
-
-### Gerenciar Pacotes de Viagens (CSU10)
+### Gerenciar Pacotes de Viagens (CSU09)
 Sumário: O Gerente de Agência realiza a gestão (inclusão, remoção, alteração e consulta) dos pacotes de viagens oferecidos aos clientes.
 
 Ator Primário: Gerente de Agência.
@@ -364,7 +310,7 @@ Fluxo Principal:
 4. O Gerente de Agência seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
 Se o Gerente desejar continuar a gestão de pacotes, o caso de uso retorna ao passo 2; caso contrário, o caso de uso termina.
 
-Fluxo Alternativo (1): Inclusão
+Fluxo Alternativo (3): Inclusão
 
 a) O Gerente requisita a inclusão de um novo pacote de viagem.
 
@@ -374,7 +320,7 @@ c) O Gerente de Agência preenche os detalhes do novo pacote.
 
 d) O Sistema verifica a validade dos dados. Se válidos, o novo pacote é incluído e a lista de pacotes é atualizada; caso contrário, o Sistema reporta o erro e solicita correções.
 
-Fluxo Alternativo (2): Remoção
+Fluxo Alternativo (3): Remoção
 
 a) O Gerente de Agência seleciona um pacote de viagem e solicita sua remoção.
 
@@ -386,7 +332,7 @@ a) O Gerente altera um ou mais detalhes de um pacote existente e requisita a atu
 
 b) O Sistema verifica a validade dos dados e, se forem válidos, atualiza os dados do pacote na lista; caso contrário, o erro é reportado.
 
-Fluxo Alternativo (4): Consulta
+Fluxo Alternativo (3): Consulta
 
 a) O Gerente de Agência opta por pesquisar pacotes de viagens pelo nome, código ou destino.
 
@@ -398,8 +344,9 @@ d) O Sistema exibe os detalhes do pacote selecionado no formulário.
 
 Pós-condições: Um pacote de viagem foi inserido, removido, seus dados foram alterados ou consultados.
 
-### Integração com Fornecedores (CSU11)
-Sumário: O Gerente de Agência realiza a integração e manutenção de informações (inclusão, exclusão, alteração e consulta) sobre fornecedores.
+### Gerenciar Pagamnetos (CSU10)
+
+Sumário: O Gerente de Agência realiza a gestão (inclusão, remoção, alteração e consulta) dos pagamentos dos clientes.
 
 Ator Primário: Gerente de Agência.
 
@@ -407,48 +354,74 @@ Pré-condições: O Gerente de Agência deve ser validado pelo Sistema.
 
 Fluxo Principal:
 
-1. O Gerente de Agência requisita a manutenção de fornecedores.
-2. O Sistema apresenta as operações disponíveis: inclusão de um novo fornecedor, alteração de um fornecedor, exclusão de um fornecedor ou consulta de dados de um fornecedor.
-3. O Gerente de Agência seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
-Se o Gerente de Agência desejar continuar a gestão de fornecedores, o caso de uso retorna ao passo 2; caso contrário, o caso de uso termina.
+1. O Gerente de Agência requisita a gestão dos pagamentos.
+2. O Sistema apresenta as operações disponíveis: Reembolso de um pagamento, inclusão de um pagamento, alteração de um pagamento, exclusão de um pagamento ou consulta de pagamentos.
+4. O Gerente de Agência seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
+Se o Gerente desejar continuar a gestão de pagamentos, o caso de uso retorna ao passo 2; caso contrário, o caso de uso termina.
 
-Fluxo Alternativo (1): Inclusão
+Flixo Alternativo (3) Reembolso
+a) O Gerente seleciona um caso de reembolso para analisar.
+b) Após a analise ele decide se o reembolso acontecerá ou não.
+c) A solicitação de reembolso é retirada da lista de reembolso.
 
-a) O Gerente de Agência requisita a inclusão de um fornecedor.
+Fluxo Alternativo (3): Inclusão
 
-b) O Sistema solicita o CNPJ do fornecedor a ser cadastrado.
+a) O Gerente requisita a inclusão de um novo pagamento.
 
-c) O Gerente de Agência fornece o CNPJ.
+b) O Sistema apresenta um formulário para o preenchimento dos detalhes do pagamento (Código, Nome do Comprador, Destino, Data, Valor, Método de Pagamento).
 
-d) O Sistema verifica se o fornecedor já está cadastrado. Se sim, o Sistema reporta o fato e retorna ao início; caso contrário, apresenta um formulário em branco para preenchimento dos detalhes do fornecedor (CNPJ, Nome, Endereço, Cidade, Estado, Telefone, E-mail, Categoria de Fornecimento, Observações).
+c) O Gerente de Agência preenche os detalhes do novo pagamento.
 
-e) O Gerente de Agência fornece os detalhes do novo fornecedor.
-
-f) O Sistema verifica a validade dos dados. Se válidos, o novo fornecedor é incluído e a lista de fornecedores é atualizada; caso contrário, o Sistema solicita novos dados e repete a verificação.
+d) O Sistema verifica a validade dos dados. Se válidos, o novo pagamento é incluído e a lista de pagamentos é atualizada; caso contrário, o Sistema reporta o erro e solicita correções.
 
 Fluxo Alternativo (2): Remoção
 
-a) O Gerente de Agência seleciona um fornecedor e solicita sua remoção.
+a) O Gerente de Agência seleciona um pagamento e solicita sua remoção.
 
-b) Se o fornecedor pode ser removido, o Sistema realiza a remoção; caso contrário, o Sistema reporta o fato.
+b) Se o pagamento pode ser removido (por exemplo, se não houver pendencias), o Sistema realiza a remoção; caso contrário, o Sistema reporta o fato.
 
 Fluxo Alternativo (3): Alteração
 
-a) O Gerente de Agência altera um ou mais detalhes do fornecedor e requisita a atualização.
+a) O Gerente altera um ou mais detalhes de um pagamneto existente e requisita a atualização.
 
-b) O Sistema verifica a validade dos dados e, se forem válidos, altera os dados do fornecedor; caso contrário, o erro é reportado.
+b) O Sistema verifica a validade dos dados e, se forem válidos, atualiza os dados do pagamento na lista; caso contrário, o erro é reportado.
 
 Fluxo Alternativo (4): Consulta
 
-a) O Gerente de Agência opta por pesquisar pelo nome ou CNPJ do fornecedor.
+a) O Gerente de Agência opta por pesquisar pagamentos pelo nome do comprador, código ou data.
 
-b) O Sistema apresenta a lista de fornecedores correspondentes.
+b) O Sistema apresenta a lista de pagamento correspondentes.
 
-c) O Gerente de Agência seleciona o fornecedor desejado.
+c) O Gerente seleciona o pagamento desejado.
 
-d) O Sistema exibe os detalhes do fornecedor selecionado no formulário.
+d) O Sistema exibe os detalhes do pagamento selecionado no formulário.
 
-Pós-condições: Um fornecedor foi inserido, removido, seus dados foram alterados ou consultados.
+Pós-condições: Um pagamento foi reembolsado, inserido, removido, seus dados foram alterados ou consultados.
+
+### Sair do Sistema (CSU11)
+
+
+Sumário: O usuário comum sai do sistema
+
+Ator Primário: Usuário Comum ou Administrador.
+
+Ator Secundário: Não possui.
+
+Pré-condições: Usuário deve estar cadastrado no sistema.
+
+Fluxo Principal:
+
+1) O usuário comum acessa a função de saída.
+
+2) O Sistema realiza o deslogue da conta.
+
+3) Se o Usuário comum estiver com um processo em andamento, o sistema informa
+que ele está com um processo em andamento e confirma com a seguinte
+mensagem "Você possui dados não salvos que serão excluídos, deseja sair
+mesmo assim?”, se ele clicar em não, o caso de uso retorna ao passo 1; caso
+contrário o caso de uso termina.
+Pós-condições: O usuário saiu do sistema.
+
 
 ### 3.4.3 Diagrama de Classes 
 
