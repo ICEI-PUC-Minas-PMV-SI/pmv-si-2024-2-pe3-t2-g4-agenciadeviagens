@@ -1150,27 +1150,19 @@ Imagine que você está planejando uma viagem e deseja procurar pacotes e oferta
 ---
 # Avaliação Heurística
 
-| Título da Heurística                                              | Descrição da Heurística              |
-|-------------------------------------------------------------------|--------------------------------------|
-| Visibilidade do status do sistema                                 | O sistema sempre deve manter os usuários informados sobre o que está acontecendo, por meio de feedback apropriado dentro de um prazo razoável.
-                                     
-| Correspondência entre o sistema e o mundo real                    | O sistema deve falar o idioma do usuário, com palavras, frases e conceitos familiares ao usuário, em vez de termos orientados ao sistema. Siga as convenções do mundo real, fazendo as informações aparecerem em uma ordem natural e lógica.
-                                     
-| Controle e liberdade do usuário                                   | Os usuários geralmente escolhem as funções do sistema por engano e precisam de uma "saída de emergência" claramente marcada para deixar o estado indesejado sem ter que passar por um diálogo prolongado. Suporte para desfazer e refazer.
-                                     
-| Consistência e padrões                                            | Os usuários não devem se perguntar se palavras, situações ou ações diferentes significam a mesma coisa.
-                                     
-| Prevenção de erros                                                | Elimine condições propensas a erros ou verifique-as e apresente aos usuários uma opção de confirmação antes que eles se comprometam com a ação.
-                                     
-| Reconhecimento em vez de recordação                               | Minimize a carga de memória do usuário, tornando objetos, ações e opções visíveis. O usuário não deve ter que lembrar informações de uma parte do diálogo para outra. As instruções de uso do sistema devem ser visíveis ou facilmente recuperáveis sempre que apropriado.
-                                     
-| Flexibilidade e eficiência de uso                                 | Aceleradores - invisíveis para o usuário iniciante - geralmente aceleram a interação do usuário experiente, de modo que o sistema possa atender a usuários inexperientes e experientes. Permita que os usuários adaptem ações frequentes.
-                                     
-| Design estético e minimalista                                     | Os diálogos não devem conter informações irrelevantes ou raramente necessárias. Cada unidade extra de informação em um diálogo concorre com as unidades relevantes de informação e diminui sua visibilidade relativa.
-                                     
-| Ajude os usuários a reconhecer, diagnosticar e recuperar de erros | As mensagens de erro devem ser expressas em linguagem simples (sem códigos), indicar com precisão o problema e sugerir construtivamente uma solução.
-                                     
-| Ajuda e documentação                                              | Mesmo que seja melhor se o sistema puder ser usado sem documentação, pode ser necessário fornecer ajuda e documentação. Essas informações devem ser fáceis de pesquisar, focadas na tarefa do usuário, listar etapas concretas a serem executadas e não serem muito grandes.
+| Título da Heurística                                              | Descrição da Heurística                                                                                     | Problemas Encontrados                                                                 | Sugestões                                                                          |
+|-------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| Visibilidade do status do sistema                                 | O sistema deve manter os usuários informados sobre o que está acontecendo, com feedback apropriado em tempo razoável. | O botão "Buscar destino" não apresenta feedback visual durante a busca.            | Adicionar um indicador de carregamento ou mensagem de "Buscando..." ao clicar.    |
+| Correspondência entre o sistema e o mundo real                    | O sistema deve usar palavras e conceitos familiares ao usuário, seguindo convenções do mundo real.           | Termos técnicos como "parcelamento" geraram confusão.                              | Usar expressões mais simples e exemplos nos campos, como "Número de parcelas (1-12)".|
+| Controle e liberdade do usuário                                   | Permitir "saídas de emergência" para deixar estados indesejados, com suporte a desfazer e refazer.           | Falta de um botão "Cancelar" em ações como preenchimento de formulários.           | Incluir botões "Cancelar" em todas as etapas críticas e permitir desfazer ações.   |
+| Consistência e padrões                                            | Garantir que palavras, situações e ações tenham significados consistentes em todo o sistema.                 | Botões de ação (como "Cadastrar-se" e "Criar Conta") apresentavam nomes inconsistentes. | Padronizar a nomenclatura em todos os botões e mensagens.                         |
+| Prevenção de erros                                                | Eliminar condições propensas a erros e apresentar opções de confirmação antes de ações críticas.              | A exclusão de itens no carrinho não apresentava mensagem de confirmação.            | Adicionar confirmação antes de exclusão e validação nos campos de formulário.      |
+| Reconhecimento em vez de recordação                               | Minimizar a carga de memória do usuário, tornando objetos, ações e opções visíveis.                          | Os usuários relataram dificuldade em encontrar instruções claras de preenchimento nos formulários. | Adicionar instruções diretamente nos formulários ou com textos explicativos.      |
+| Flexibilidade e eficiência de uso                                 | Permitir que o sistema atenda usuários iniciantes e experientes, com opções de personalização.                | Não há atalhos ou funções rápidas para usuários experientes.                        | Implementar atalhos de teclado para buscas e acesso rápido a seções como o carrinho. |
+| Design estético e minimalista                                     | Os diálogos não devem conter informações irrelevantes ou raramente necessárias.                              | Excesso de informações visuais na seção de promoções, dificultando a leitura.       | Simplificar a exibição de ofertas, destacando informações principais como preço e destino. |
+| Ajude os usuários a reconhecer, diagnosticar e recuperar de erros | Mensagens de erro devem ser claras, indicar o problema e sugerir soluções.                                   | Mensagens de erro genéricas, como "Erro no formulário", sem detalhamento.           | Criar mensagens de erro específicas e com sugestões de correção (ex.: "Digite um e-mail válido"). |
+| Ajuda e documentação                                              | Ajuda e documentação devem ser fáceis de pesquisar e focadas na tarefa do usuário.                           | Não há uma seção de ajuda acessível diretamente na interface.                       | Criar uma seção "Ajuda" clara e acessível no menu, com tutoriais curtos e explicativos. |
+
                                      
 
 
