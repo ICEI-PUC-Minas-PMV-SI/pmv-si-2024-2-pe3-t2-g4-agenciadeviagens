@@ -1148,5 +1148,20 @@ Imagine que você está planejando uma viagem e deseja procurar pacotes e oferta
 4. Reorganizar o layout do campo de parcelamento para maior clareza.
 
 ---
+# Avaliação Heurística
+
+| Título da Heurística                                              | Descrição da Heurística              | Problemas Encontrados | Sugestões |
+|-------------------------------------------------------------------|--------------------------------------|-----------------------|-----------|
+| Visibilidade do status do sistema                                 | O sistema sempre deve manter os usuários informados sobre o que está acontecendo, por meio de feedback apropriado dentro de um prazo razoável.
+
+| Correspondência entre o sistema e o mundo real                    |
+| Consistência e padrões                                            |
+| Prevenção de erros                                                |
+| Reconhecimento em vez de recordação                               |
+| Flexibilidade e eficiência de uso                                 |
+| Design estético e minimalista                                     |
+| Ajude os usuários a reconhecer, diagnosticar e recuperar de erros |
+| Ajuda e documentação                                              |
+
 
 
