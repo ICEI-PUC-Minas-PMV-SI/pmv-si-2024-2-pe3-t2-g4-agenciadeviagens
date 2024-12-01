@@ -623,11 +623,11 @@ Imagine que você está planejando uma viagem e deseja procurar pacotes e oferta
 **Projeto (Nome do Sistema):** Mundo Sem Fronteiras
 
 **Equipe:** PMV-SI-T2-G4
-
 **Nome do Avaliador:** Lucas Warley 
-
 **Data:** 28/11/2024  
 **Participante Nº:** 4
+
+---
 
 ## Proposta
 
