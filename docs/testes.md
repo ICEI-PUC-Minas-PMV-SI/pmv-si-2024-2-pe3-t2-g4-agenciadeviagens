@@ -617,6 +617,7 @@ Imagine que você está planejando uma viagem e deseja procurar pacotes e oferta
 5. Ajustar o layout do campo de parcelamento para maior clareza.
 
 ---
+
 # Relatório de Teste com Usuário
 
 **Projeto (Nome do Sistema):** Mundo Sem Fronteiras
