@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Sem Fronteiras</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="logo">Mundo Sem Fronteiras</div>
+        <nav class="nav">
+            <a href="home.html">Início</a>
+            <a href="ofertas.html">Ofertas</a>
+            <a href="#">Passagens</a>
+        </nav>
+        <div class="actions">
+            <button class="btn">Login</button>
+        </div>
+    </header>
+
+    <!-- Seção de busca -->
+    <section class="search-section">
+        <div class="search-box">
+            <h1>Encontre seu hotel</h1>
+            <form>
+                <select>
+                    <option value="" disabled selected>Origem</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="rio">Rio de Janeiro</option>
+                </select>
+                <select>
+                    <option value="" disabled selected>Destino</option>
+                    <option value="paris">Paris</option>
+                    <option value="ny">Nova York</option>
+                </select>
+                <input type="date">
+                <label for="inputNumero"></label>
+                <input type="number" min="1" required
+                  placeholder="Número de adultos">
+                  <label for="inputNumero"></label>
+                <input type="number" min="0" required
+                  placeholder="Número de crianças">
+                <select>
+                    <option value="" disabled selected>Tipo de Viagem</option>
+                    <option value="turismo">Turismo</option>
+                    <option value="negocios">Negócios</option>
+                </select>
+                <button type="submit">Buscar Destinos</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Promoção de hotéis -->
+    <section class="promo-hotels">
+        <h2>Confira as promoções de hotéis!</h2>
+    </section>
+
+    <!-- hotéis -->
+    <section class="packages">
+        <h2>Hotéis</h2>
+        <div class="carousel">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Rio de Janeiro">
+                <p>Atlantico Sul Hotel</p>
+                <p1>Rio de Janeiro</p1>
+                <span>A partir de R$ 250,00 a diária</span>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Salvador">
+                <p>Bahiamar Hotel</p>
+                <p1>Salvador</p1>
+                <span>A partir de R$ 198,00 a diária</span>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Pequim">
+                <p>Softel Beijing Central</p>
+                <p1>Pequim</p1>
+                <span>A partir de R$ 614,00 a diária</span>
+            </div>
+        </div>
+
+
+        <div class="carousel">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Rio de Janeiro">
+                <p>USC Hotel</p>
+                <p1>Los Angeles</p1>
+                <span>A partir de R$ 383,00 a diária</span>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Salvador">
+                <p>Grand Hyatt Berlin</p>
+                <p1>Berlim</p1>
+                <span>A partir de R$ 838,00 a diária</span>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Pequim">
+                <p>SHotel Panamby São Paulo</p>
+                <p1>São Paulo</p1>
+                <span>A partir de R$ 175,00 a diária</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2024 Mundo Sem Fronteiras - Todos os direitos reservados</p>
+    </footer>
+</body>
+
+</html>
